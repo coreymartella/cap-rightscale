@@ -65,6 +65,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_runtime_dependency(%q<capistrano>, ["> 2.4"])
       s.add_runtime_dependency(%q<rightresource>, ["> 0.3.4"])
+      s.add_runtime_dependency(%q<net-ping>, ["~> 1.5"])
     else
       s.add_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_dependency(%q<cucumber>, [">= 0"])
@@ -73,6 +74,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rcov>, [">= 0"])
       s.add_dependency(%q<capistrano>, ["> 2.4"])
       s.add_dependency(%q<rightresource>, ["> 0.3.4"])
+      s.add_dependency(%q<net-ping>, ["~> 1.5"])
     end
   else
     s.add_dependency(%q<rspec>, ["~> 2.3.0"])
@@ -82,6 +84,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rcov>, [">= 0"])
     s.add_dependency(%q<capistrano>, ["> 2.4"])
     s.add_dependency(%q<rightresource>, ["> 0.3.4"])
+    s.add_dependency(%q<net-ping>, ["~> 1.5"])
   end
 end
 

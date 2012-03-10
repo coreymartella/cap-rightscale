@@ -1,6 +1,6 @@
 require 'thread'
 require 'resolv'
-require 'ping'
+require 'net/ping'
 
 class RSUtils
   class << self
@@ -40,7 +40,7 @@ class RSUtils
       threads = []
 
       hosts.each do |host|
-        threads << Thread.new(host) {|h| Ping.pingecho(h) }
+        threads << Thread.new(host) {|h| Net::Ping::External.new(h).ping }
       end
       threads.each_with_index do |t,i|
         unless t.value
