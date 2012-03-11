@@ -8,7 +8,7 @@ namespace :rs do
   namespace :cache do
     task :clear do
       logger.debug("Clear cache all")
-      logger.trace(Dir.glob("#{Dir.tmpdir}/cap-rightscale-#{ENV['USER']}-*/*").each {|f| f } || "")
+      logger.trace(Dir.glob("#{Dir.tmpdir}/cap-rightscale-#{ENV['USER']}-*/*").join("\n") || "")
       FileUtils.rm(Dir.glob("#{Dir.tmpdir}/cap-rightscale-#{ENV['USER']}-*/*"), {:force => true})
     end
   end
